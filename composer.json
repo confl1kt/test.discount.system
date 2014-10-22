@@ -1,17 +1,8 @@
 {
-    "name": "confl1kt/something.bad",
+    "name": "confl1kt/test.discount.system",
     "description": "Something Bad",
     "require": {
-        "doctrine/doctrine-orm-module": "0.7.0",
-        "doctrine/orm":"2.3.4",
-        "zendframework/zendframework": "2.2.2",
-        "doctrine/migrations": "dev-master",
-        "predis/predis": "0.8.*",
-        "twig/twig": "1.14.1",
-        "doctrine/mongodb-odm": "dev-master",
-        "doctrine/doctrine-mongo-odm-module": "0.7.0",
-        "doctrine/collections": "1.1",
-        "videlalvaro/php-amqplib"  : "~2.4.0"
+        "zendframework/zendframework": "2.2.2"
     },
     "minimum-stability": "stable"
 }

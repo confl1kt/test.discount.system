@@ -1,0 +1,6 @@
+/vendor/*
+/data/*
+\.idea/*
+autoload_classmap\.php
+template_map\.php
+composer\.lock

@@ -3,6 +3,14 @@
 namespace Test\Controller;
 
 
-class TestController {
+use Zend\Mvc\Controller\AbstractActionController;
+use Zend\View\Model\ViewModel;
+
+class TestController extends AbstractActionController{
+
+    public function indexAction()
+    {
+        return new ViewModel();
+    }
 
 } 
