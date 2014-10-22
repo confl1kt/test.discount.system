@@ -49,8 +49,7 @@ class ItemCountDiscount implements DiscountInterface{
     {
         $count = $this->getItemCount($products);
         if($count >= $this->count){
-            $this->inUse = [];
-            return false;
+            return true;
         }
         $this->inUse = [];
         return true;

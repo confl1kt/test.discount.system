@@ -27,7 +27,7 @@ class DiscountManager {
             return;
         }
         foreach($this->discounts as $discount){
-            if($discount->prepare($order->getProduts())){
+            if($discount->prepare($order->getProducts())){
                 $discount->useDiscount($order->getProducts());
             }
         }

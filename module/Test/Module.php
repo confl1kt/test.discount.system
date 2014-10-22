@@ -46,4 +46,13 @@ class Module {
     {
         return ['Application'];
     }
+
+    public function getServiceConfig()
+    {
+        return [
+            'factories' => [
+                'Calculator' => 'Test\Service\Calculator'
+            ],
+        ];
+    }
 } 

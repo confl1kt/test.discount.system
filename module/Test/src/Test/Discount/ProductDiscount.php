@@ -51,11 +51,12 @@ class ProductDiscount implements DiscountInterface{
     public function prepare($products)
     {
         foreach($this->products as $key => $product){
-            if(!$this->inList($product, $products)){
+            $productKey = $this->inList($product, $products);
+            if(is_bool($productKey)){
                 $this->tempUse = [];
                 return false;
             }
-            $this->tempUse[$key] = $key;
+            $this->tempUse[$productKey] = $productKey;
         }
 
         foreach ($this->tempUse as $item) {
@@ -79,7 +80,7 @@ class ProductDiscount implements DiscountInterface{
                 continue;
             }
             if(!isset($this->inUse[$key]) && !isset($this->tempUse[$key]) && $item->equals($product)){
-                return true;
+                return $key;
             }
         }
         return false;

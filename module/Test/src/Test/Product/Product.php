@@ -56,6 +56,6 @@ class Product implements ProductInterface
 
     public function isChanged()
     {
-        return true;
+        return $this->changed;
     }
 }
