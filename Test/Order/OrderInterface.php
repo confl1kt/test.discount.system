@@ -1,7 +1,7 @@
 <?php
-namespace Content\Service\Test\Order;
+namespace Test\Order;
 
-use Content\Service\Test\Product\ProductInterface;
+use Test\Product\ProductInterface;
 
 interface OrderInterface {
     /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace Content\Service\Test\Order;
+namespace Test\Order;
 
 
 interface UseDiscountInterface {

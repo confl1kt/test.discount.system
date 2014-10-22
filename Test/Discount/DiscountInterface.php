@@ -1,7 +1,7 @@
 <?php
-namespace Content\Service\Test\Discount;
+namespace Test\Discount;
 
-use Content\Service\Test\Product\ProductInterface;
+use Test\Product\ProductInterface;
 
 interface DiscountInterface {
     const CONSTANTLY = 1;

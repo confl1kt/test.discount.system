@@ -1,6 +1,6 @@
 <?php
 
-namespace Content\Service\Test;
+namespace Test;
 
 use Content\Service\Test\Discount\DiscountInterface;
 use Content\Service\Test\Order\OrderInterface;

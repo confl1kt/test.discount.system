@@ -1,6 +1,6 @@
 <?php
 
-namespace Content\Service\Test\Product;
+namespace Test\Product;
 
 
 interface ProductInterface {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Content\Service\Test\Discount;
+namespace Test\Discount;
 
 
-use Content\Service\Test\Product\ProductInterface;
+use Test\Product\ProductInterface;
 
 class DiscountChain implements DiscountInterface{
 
