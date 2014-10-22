@@ -5,8 +5,8 @@ namespace Test\Controller;
 
 use Test\Order\Order;
 use Test\Product\Product;
+use Zend\Http\Response;
 use Zend\Mvc\Controller\AbstractActionController;
-use Zend\View\Model\ViewModel;
 
 class TestController extends AbstractActionController{
 
@@ -34,8 +34,8 @@ class TestController extends AbstractActionController{
         $order->addProduct(new Product('E', 100));
         $order->addProduct(new Product('D', 100));
         $service->setOrder($order);
-        echo $service->calculate();
-        return new ViewModel();
+        $this->response->setContent($service->calculate());
+        return $this->response;
     }
 
 } 
