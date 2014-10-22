@@ -48,6 +48,10 @@ class ProductDiscount implements DiscountInterface{
         return $this;
     }
 
+    /**
+     * @param \Test\Product\ProductInterface[] $products
+     * @return bool|mixed
+     */
     public function prepare($products)
     {
         foreach($this->products as $key => $product){

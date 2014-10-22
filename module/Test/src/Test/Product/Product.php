@@ -54,6 +54,9 @@ class Product implements ProductInterface
         return false;
     }
 
+    /**
+     * @return bool
+     */
     public function isChanged()
     {
         return $this->changed;

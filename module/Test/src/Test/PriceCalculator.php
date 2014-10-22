@@ -32,6 +32,9 @@ class PriceCalculator {
         return $this;
     }
 
+    /**
+     * @return float|int
+     */
     public function calculate()
     {
         $this->useDiscount();

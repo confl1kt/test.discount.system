@@ -36,6 +36,9 @@ class ItemCountDiscount implements DiscountInterface{
         return $this;
     }
 
+    /**
+     * @param ProductInterface $product
+     */
     public function addException(ProductInterface $product)
     {
         $this->exceptions[] = $product;
