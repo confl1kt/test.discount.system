@@ -2,9 +2,9 @@
 
 namespace Test;
 
-use Content\Service\Test\Discount\DiscountInterface;
-use Content\Service\Test\Order\OrderInterface;
-use Content\Service\Test\Order\UseDiscountInterface;
+use Test\Discount\DiscountInterface;
+use Test\Order\OrderInterface;
+use Test\Order\UseDiscountInterface;
 
 class DiscountManager {
     /** @var DiscountInterface[] */

@@ -16,7 +16,8 @@ class ProductDiscount implements DiscountInterface{
     private $discount;
     /** @var array  */
     private $inUse = array();
-
+    /** @var array  */
+    private $tempUse = array();
     /**
      * @param ProductInterface $product
      * @return $this
@@ -51,11 +52,18 @@ class ProductDiscount implements DiscountInterface{
     {
         foreach($this->products as $key => $product){
             if(!$this->inList($product, $products)){
-                $this->inUse = [];
+                $this->tempUse = [];
                 return false;
             }
-            $this->inUse[$key] = $key;
+            $this->tempUse[$key] = $key;
         }
+
+        foreach ($this->tempUse as $item) {
+            $this->inUse[$item] = $item;
+        }
+
+        $this->tempUse = [];
+        $this->prepare($products);
         return true;
     }
 
@@ -67,7 +75,10 @@ class ProductDiscount implements DiscountInterface{
     private function inList($product, $products = array())
     {
         foreach ($products as $key => $item) {
-            if(!isset($this->inUse[$key]) && $item->equals($product)){
+            if($item->isChanged()){
+                continue;
+            }
+            if(!isset($this->inUse[$key]) && !isset($this->tempUse[$key]) && $item->equals($product)){
                 return true;
             }
         }

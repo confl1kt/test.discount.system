@@ -2,7 +2,6 @@
 
 namespace Test\Discount;
 
-
 use Test\Product\ProductInterface;
 
 class DiscountChain implements DiscountInterface{

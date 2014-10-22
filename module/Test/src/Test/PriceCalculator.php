@@ -3,8 +3,8 @@
 namespace Test;
 
 
-use Content\Service\Test\Order\OrderInterface;
-use Content\Service\Test\Order\UseDiscountInterface;
+use Test\Order\OrderInterface;
+use Test\Order\UseDiscountInterface;
 
 class PriceCalculator {
     /** @var DiscountManager */

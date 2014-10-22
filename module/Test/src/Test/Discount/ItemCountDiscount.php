@@ -83,7 +83,7 @@ class ItemCountDiscount implements DiscountInterface{
         foreach($this->inUse as $key){
             $price = $products[$key]->getPrice();
             if($this->type == self::PARTLY){
-                $price = $price - $price*$this->discount/100;
+                $price = $price - $price * $this->discount / 100;
             }else{
                 $price -= $this->discount;
             }
